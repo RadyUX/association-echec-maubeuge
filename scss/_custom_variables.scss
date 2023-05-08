@@ -1,0 +1,24 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&family=Barlow:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Montserrat:wght@400;500;600;700&family=Open+Sans&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+$primary: #4C3D3D;
+$secondary: #C07F00;
+$font-family-base: "Barlow", sans-serif;
+
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$new-breakpoints: (
+    xl: 1280px,
+    xxl:1600px
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $new-breakpoints);
+
+$new-container-max-widths: (
+  xl: 1220px,
+  xxl:1520px
+);
+
+$container-max-widths: map-merge($container-max-widths, $new-container-max-widths);

@@ -1,0 +1,64 @@
+
+@import "custom_variables"; // Vos variables personnalisées
+
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Importez le fichier bootstrap.scss pour obtenir tous les composants de Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// my custom bootstrap
+
+//my custom row
+*{
+    color: aliceblue;
+    box-sizing: border-box;
+}
+.row {
+    div:nth-child(1) {background: #FFF7D4;}
+    div:nth-child(2) {background: #FFD95A;}
+    div:nth-child(3) {background: #C07F00;}
+}
+
+
+//my custom navbar
+.navbar-toggler {
+    border: none;
+  
+    &:active,
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  
+
+// custom container
+
+  .primary-container {
+    @include make-container(0px);
+    overflow: hidden;
+  }
+
+  //custom font-size
+
+.mobile-first-font-size{
+    font-size: 16px; // Taille de police par défaut pour les petits écrans
+
+  @include media-breakpoint-up(sm) {
+    font-size: 18px; // Taille de police pour les écrans à partir de "sm"
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px; // Taille de police pour les écrans à partir de "md"
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 24px; // Taille de police pour les écrans à partir de "lg"
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 28px; // Taille de police pour les écrans à partir de "xl"
+  }
+}
