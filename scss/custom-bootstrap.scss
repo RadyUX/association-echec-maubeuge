@@ -1,9 +1,9 @@
 
-@import "custom_variables"; // Vos variables personnalisées
+@import "custom_variables"; 
 
 @import "../node_modules/bootstrap/scss/mixins";
 
-// Importez le fichier bootstrap.scss pour obtenir tous les composants de Bootstrap
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
@@ -11,14 +11,78 @@
 
 //my custom row
 *{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     box-sizing: border-box;
+    text-decoration: none;
 }
+
+body{
+    background-color: $primary;
+}
+
+//my custom row
 .row {
-    div:nth-child(1) {background: #FFF7D4;}
-    div:nth-child(2) {background: #FFD95A;}
-    div:nth-child(3) {background: #C07F00;}
+    div:nth-child(1) {background: $secondary;}
+    div:nth-child(2) {background: $primary;}
+    div:nth-child(3) {background: $secondary;}
 }
+
+.block-carousel {
+    @include make-col-ready();
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(12);
+    }
+  
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+      
+    }
+    .carousel {
+      border-radius: $border-radius-sm;
+      padding: 10px;
+     
+  
+      .carousel-item {
+        img {
+          width: 100%;
+          object-fit: cover; // Ajoutez cette ligne pour recadrer l'image en fonction de la hauteur maximale
+          max-height: 150px;
+
+          @include media-breakpoint-up(sm) {
+            max-height: 300px;
+          }
+    
+
+      @include media-breakpoint-up(lg) {
+        max-height: 400px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        max-height: 700px; // Modifiez cette valeur en fonction de la hauteur maximale souhaitée pour les écrans xl
+      }
+        }
+      }
+    }
+  }
+
+.block-calendar{
+    @include make-col-ready();
+    @include media-breakpoint-up(xs) {
+        @include make-col(9);
+      }
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(11);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(2);
+      }
+
+      max-height: 600px;
+}
+
 
 
 //my custom navbar
@@ -32,6 +96,8 @@
       outline: none;
     }
   }
+
+  nav
   
 
 // custom container
@@ -41,8 +107,7 @@
     overflow: hidden;
   }
 
-  //custom font-size
-
+//custom font-size
 .mobile-first-font-size{
     font-size: 16px; // Taille de police par défaut pour les petits écrans
 
@@ -62,3 +127,4 @@
     font-size: 28px; // Taille de police pour les écrans à partir de "xl"
   }
 }
+
