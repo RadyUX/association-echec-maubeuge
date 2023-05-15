@@ -1,22 +1,26 @@
-lockfileVersion: 5.4
-
-specifiers:
-  '@popperjs/core': ^2.11.6
-  bootstrap: ^5.2.3
-  jquery: ^3.6.4
+lockfileVersion: '6.0'
 
 dependencies:
-  '@popperjs/core': 2.11.7
-  bootstrap: 5.2.3_@popperjs+core@2.11.7
-  jquery: 3.6.4
+  '@popperjs/core':
+    specifier: ^2.11.6
+    version: 2.11.7
+  bootstrap:
+    specifier: ^5.2.3
+    version: 5.2.3(@popperjs/core@2.11.7)
+  calendar-js:
+    specifier: ^1.4.4
+    version: 1.4.4
+  jquery:
+    specifier: ^3.6.4
+    version: 3.6.4
 
 packages:
 
-  /@popperjs/core/2.11.7:
+  /@popperjs/core@2.11.7:
     resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
     dev: false
 
-  /bootstrap/5.2.3_@popperjs+core@2.11.7:
+  /bootstrap@5.2.3(@popperjs/core@2.11.7):
     resolution: {integrity: sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==}
     peerDependencies:
       '@popperjs/core': ^2.11.6
@@ -24,6 +28,11 @@ packages:
       '@popperjs/core': 2.11.7
     dev: false
 
-  /jquery/3.6.4:
+  /calendar-js@1.4.4:
+    resolution: {integrity: sha512-KesBEbMZnjGzO/xl0ZcJVnezSRw3Xn/KaSUneY4LnANKlZwlllOtd6UGSyW8DSM+diUNi5dVVmSx4eZIMAA2Aw==}
+    engines: {node: '>=4.6.0'}
+    dev: false
+
+  /jquery@3.6.4:
     resolution: {integrity: sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ==}
     dev: false

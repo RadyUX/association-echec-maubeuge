@@ -9,6 +9,7 @@ $primary: #FFD95A*/
 $font-family-base: "Barlow", sans-serif;
 
 
+
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 
@@ -25,3 +26,8 @@ $new-container-max-widths: (
 );
 
 $container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
+
+$custom-spacers: (
+  6: $spacer * 6.5,
+);
+$spacers: map-merge($spacers, $custom-spacers );
