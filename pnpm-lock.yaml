@@ -1,20 +1,22 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  
   '@popperjs/core':
     specifier: ^2.11.6
     version: 2.11.7
   bootstrap:
     specifier: ^5.2.3
     version: 5.2.3(@popperjs/core@2.11.7)
-  calendar-js:
-    specifier: ^1.4.4
-    version: 1.4.4
+  fullcalendar:
+    specifier: ^6.1.7
+    version: 6.1.7
   jquery:
     specifier: ^3.6.4
     version: 3.6.4
 
 packages:
+
 
   /@popperjs/core@2.11.7:
     resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
@@ -28,11 +30,22 @@ packages:
       '@popperjs/core': 2.11.7
     dev: false
 
-  /calendar-js@1.4.4:
-    resolution: {integrity: sha512-KesBEbMZnjGzO/xl0ZcJVnezSRw3Xn/KaSUneY4LnANKlZwlllOtd6UGSyW8DSM+diUNi5dVVmSx4eZIMAA2Aw==}
-    engines: {node: '>=4.6.0'}
+ 
+  /fullcalendar@6.1.7:
+    resolution: {integrity: sha512-e4KF/wf0gOilgDRAhOOJZrAzzPqDDAGF0SogyM0rTrZvn4HgC3ZL9CfBttc4juMMnmKQGNcGt649+ZnG+zxUTA==}
+    dependencies:
+      '@fullcalendar/core': 6.1.7
+      '@fullcalendar/daygrid': 6.1.7(@fullcalendar/core@6.1.7)
+      '@fullcalendar/interaction': 6.1.7(@fullcalendar/core@6.1.7)
+      '@fullcalendar/list': 6.1.7(@fullcalendar/core@6.1.7)
+      '@fullcalendar/multimonth': 6.1.7(@fullcalendar/core@6.1.7)
+      '@fullcalendar/timegrid': 6.1.7(@fullcalendar/core@6.1.7)
     dev: false
 
   /jquery@3.6.4:
     resolution: {integrity: sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ==}
+    dev: false
+
+  /preact@10.12.1:
+    resolution: {integrity: sha512-l8386ixSsBdbreOAkqtrwqHwdvR35ID8c3rKPa8lCWuO86dBi32QWHV4vfsZK1utLLFMvw+Z5Ad4XLkZzchscg==}
     dev: false

@@ -20,6 +20,7 @@ body{
     background-color: $primary;
 }
 
+
 //my custom row
 .row {
     div:nth-child(1) {background: $secondary;}
@@ -31,6 +32,7 @@ body{
 
 
 .block-carousel {
+  max-height: 550px;
     @include make-col-ready();
   
     @include media-breakpoint-up(sm) {
@@ -47,33 +49,18 @@ body{
       max-width: 1250px;
       
     }
-    .carousel {
+    .carousel-inner {
       border-radius: $border-radius-sm;
       padding: 8px;
      
+     
   
       .carousel-item {
+        max-height: 550px;
         img {
-          width: 100%;
-          object-fit: cover; // Ajoutez cette ligne pour recadrer l'image en fonction de la hauteur maximale
-          max-height: 160px;
-
-          @include media-breakpoint-up(sm) {
-            max-height: 300px;
-          }
-
-         
-      @include media-breakpoint-up(lg) {
-        max-height: 400px;
-      }
-
-      @include media-breakpoint-up(xl) {
-        max-height: 800px; // Modifiez cette valeur en fonction de la hauteur maximale souhaitée pour les écrans xl
-      }
-
-     
-
-   
+          height: 100%;
+          width: 100%;  // Assurez-vous que l'image prend toute la largeur de son conteneur
+          object-fit: cover;  // Changez "contain" en "cover"
         }
       }
     }
@@ -113,7 +100,6 @@ body{
     }
   }
 
-  nav
   
 
 // custom container
@@ -147,3 +133,20 @@ body{
   }
 }
 
+@media (max-width: 767px) {
+  .fc .fc-button {
+    font-size: 10px; /* Reduire la taille de la police des boutons */
+    padding: 2px 5px; /* Réduire le padding des boutons */
+  }
+  .fc .fc-toolbar-title {
+    font-size: 14px; /* Ajustez cette valeur en fonction de vos besoins */
+  }
+}
+
+.fc .fc-daygrid-day-top {
+  font-size: 12px; /* Réduire la taille de la police */
+  padding: 1px; /* Réduire le padding */
+}
+.border-cell {
+  border: 1px solid black;
+}
