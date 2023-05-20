@@ -9,7 +9,7 @@
 
 // my custom bootstrap
 
-//my custom row
+
 *{
     color: rgb(255, 255, 255);
     box-sizing: border-box;
@@ -24,47 +24,64 @@ body{
 //my custom row
 .row {
     div:nth-child(1) {background: $secondary;}
-    div:nth-child(2) {background: $primary;}
-    div:nth-child(3) {background: $secondary;}
-
 }
 
+section { 
+  
+  width: 100vw;
 
 
-.block-carousel {
-  max-height: 550px;
-    @include make-col-ready();
-  
-    @include media-breakpoint-up(sm) {
-      @include make-col(12);
-    }
-  
+  .block-carousel{
+    @extend .mt-lg-6;
+    @extend .p-4;
+   
+ 
+    @include make-col(12);
+
+   
+
     @include media-breakpoint-up(lg) {
       @include make-col(8);
-      
-    }
-    
-
-    @include media-breakpoint-up(xxl) {
-      max-width: 1250px;
-      
-    }
-    .carousel-inner {
-      border-radius: $border-radius-sm;
-      padding: 8px;
+      min-height: 100%;
      
-     
-  
-      .carousel-item {
-        max-height: 550px;
-        img {
-          height: 100%;
-          width: 100%;  // Assurez-vous que l'image prend toute la largeur de son conteneur
-          object-fit: cover;  // Changez "contain" en "cover"
-        }
+    }
+    .carousel-item{
+      max-height: 600px;
+      
+      img{
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
       }
     }
   }
+
+  .block-calendar{
+     @extend .mt-lg-4;
+     @extend .mt-xxl-6;
+    
+    @include media-breakpoint-up(lg) {
+      @include make-col(1);
+    }
+  }
+
+  .block-news{
+   
+    @include media-breakpoint-up(lg) {
+      @include make-col(12);
+    }
+  }
+}
+ 
+  
+   
+  
+   
+
+
+
+
+
 
 .block-calendar{
   margin: 20px;
@@ -111,7 +128,7 @@ body{
 
 //custom font-size
 .mobile-first-font-size{
-    font-size: 16px; // Taille de police par défaut pour les petits écrans
+    font-size: 14px; // Taille de police par défaut pour les petits écrans
 
   @include media-breakpoint-up(sm) {
     font-size: 18px; // Taille de police pour les écrans à partir de "sm"
@@ -125,12 +142,7 @@ body{
     font-size: 24px; // Taille de police pour les écrans à partir de "lg"
   }
 
-  @include media-breakpoint-up(xl) {
-    font-size: 28px; // Taille de police pour les écrans à partir de "xl"
-  }
-  @include media-breakpoint-up(xxl) {
-    font-size: 42px; // Taille de police pour les écrans à partir de "xl"
-  }
+
 }
 
 @media (max-width: 767px) {
@@ -150,3 +162,39 @@ body{
 .border-cell {
   border: 1px solid black;
 }
+
+/*.custom-grid {
+  $grid-columns: 10;
+  .item {
+      @include make-row();
+      .profile {
+          @include make-sm-column(2);
+          @include make-md-column(3);
+      }
+      .content {
+          @include make-sm-column(8);
+          @include make-md-column(7);
+      }
+  }
+  $grid-columns: 12;  Restore default 
+}
+
+
+.container {
+  @extend .row;
+  .left-sidebar,
+  .main-content,
+  .widgets {
+      @extend .col-md-4;
+  }
+  .left-sidebar {
+      @extend .col-sm-2;
+  }
+  .main-content {
+      @extend .col-sm-6;
+  }
+  .widgets {
+      @extend .col-sm-3;
+      @extend .text-center;
+  }
+}*/
