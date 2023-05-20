@@ -1,3 +1,16 @@
 // footer
 
-//
+
+//my custom navbar
+.navbar-toggler {
+    border: none;
+  
+    &:active,
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  
